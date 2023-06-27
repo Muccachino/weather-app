@@ -116,7 +116,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.scss */ \"./src/styles.scss\");\n\nconsole.log(\"hello world!\");\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.scss */ \"./src/styles.scss\");\n\n\nasync function fetchWeatherData() {\n  try {\n    const response = await fetch(\n      \"https://api.openweathermap.org/data/2.5/weather?q=graz&appid=dcdb46266f021e65cfdf86ea280dcece\"\n    );\n    const data = await response.json();\n    console.log(data);\n    //showData(data);\n  } catch (err) {\n    throw new Error(\"Sorry, something went wrong\");\n  }\n}\nfetchWeatherData();\n\n/* const showData = (data) => {\n  const container = document.querySelector(\"#app\");\n  const weather = document.createElement(\"div\")\n\n} */\n\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
 
 /***/ })
 
