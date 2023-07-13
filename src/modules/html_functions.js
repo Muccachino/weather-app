@@ -25,10 +25,10 @@ function addPicture(picImportName, parent) {
 }
 
 function createSwitch(parent) {
-  const label = createTags("label", "switch");
-  const box = createTags("input", "switchbox");
+  const label = createTags("label", "hide", "switch");
+  const box = createTags("input", null, "switchbox");
   box.type = "checkbox";
-  const slider = createTags("span", "slider");
+  const slider = createTags("span", "hide", "slider");
   expandHtml(label, box);
   expandHtml(label, slider);
   expandHtml(parent, label);
