@@ -36,6 +36,6 @@ cityInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     const city = cityInput.value;
     fetchWeatherData(city, "Celsius");
-    container.style.backgroundColor = "skyblue";
+    container.style.backgroundColor = "rgba(135,206,235,0.5)";
   }
 });

@@ -1,4 +1,4 @@
-import { showData } from "./display_data";
+import { showData, displayBackground } from "./display_data";
 
 async function fetchWeatherData(city, degree) {
   try {
@@ -16,6 +16,7 @@ async function fetchWeatherData(city, degree) {
         alldata.weather[0].icon,
       ];
       showData(mydata);
+      displayBackground(alldata.weather[0].main);
     } else if (degree === "Fahrenheit") {
       const mydata = [
         [alldata.name, alldata.sys.country],
